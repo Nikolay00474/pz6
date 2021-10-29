@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Canvas</title>
+   <link rel="stylesheet" href="assets/css/layout.css">
+   <link rel="stylesheet" href="assets/css/canvas.css">
+   <script src="assets/js/canvas.js"></script>
+   <script src="assets/js/all.js"></script>
+   <script>
+       window.onload = function() {
+            canvas('#draw', {
+            width: 500,
+            height: 300,
+            strokeWidth: 5,
+            strokeColor: "#df4b26"
+            })
+       }
+   </script>
+</head>
+<body>
+<header class="header">
+<a href="index.html"><img height="60" src="assets/img/logo.png" alt="logo"></a>
+</header>
+<div class="container">
+   <main class="center column">
+       <article>
+           <h1>Canvas</h1>
+           
+        <canvas id="draw"></canvas>
+        <div class="toolbar" id="toolbar">
+            <button class="btn" id="clr"><i class="fas fa-trash-alt"></i></button>
+            <button class="btn" id="save"><i class="fas fa-image"></i></button>
+            <button class = "btn" id = "time1"><i class="fas fa-clock"></i></button>
+            <button class = "btn" id = "toLocal"><i class="fas fa-server"></i></button>
+            <button class = "btn" id = "fromLocal"><i class="fas fa-cloud-download-alt"></i></button>
+
+            <input type="color" id="color-picker" /><br>
+            <label>Введите ширину кисти
+                <input type="text" id="brush"></label>
+            <br>
+            <label>Введите URL картинки
+            <input type="text" id="img"></label>
+
+        </div>
+        </article>
+   </main>
+   <nav class="left column">
+       <h2>Menu</h2>
+       <ul>
+           <li><a href="contact.html">Contact</a></li>
+		   <li><a href="about.html">About</a></li>
+		   <li><a href="slider.html">Slider</a></li>
+		   <li><a href="media.html">Media</a></li>
+		   <li><a href="table.html">Table</a></li>
+       </ul>
+   </nav>
+   <div class="right column">
+       <h3>Right heading</h3>
+       <p></p>
+   </div>
+   <div class="push"></div>
+</div>
+<div class="footer-wrapper">
+   <footer class="footer"><img height="50" src="assets/img/logo.png" alt="logo"></footer>
+</div>
+</body>
+</html>

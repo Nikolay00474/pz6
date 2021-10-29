@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Slider</title>
+   <link rel="stylesheet" href="assets/css/layout.css">
+   <script src="assets/js/script.js"></script>
+   <script>
+    window.onload = function() {
+        let slides = [
+            {
+                title: "Google",
+                background: "https://i.imgur.com/PUcBvyu.png",
+                link: "http://google.com"
+            }, {
+                title: "Yahoo",
+                background: "https://i.imgur.com/RSLr2Ay.jpg",
+                link: "http://yahoo.com"
+            },{
+                title: "Local",
+                background: "assets/img/pic.jpg",
+                link: "https://www.youtube.com/watch?v=Ax5YFnzhZL0"
+            }
+        ]
+        Slider.initSlider(slides);
+    };
+ </script>
+</head>
+<body>
+<header class="header">
+<a href="index.html"><img height="60" src="assets/img/logo.png" alt="logo"></a>
+</header>
+<div class="container">
+   <main class="center column">
+       <article>
+           <h1>Slider</h1>
+           <p>
+            <div id="slider"></div>
+           </p>
+           <p>
+            <button class="but" id="prevs">prev</button>
+            <script>
+                document.getElementById("prevs").addEventListener("click", function() {
+                    Slider.prevSlide();
+                });
+                </script>
+            <button class="but" id="nexts">next</button>
+            <script>
+                document.getElementById("nexts").addEventListener("click", function() {
+                    Slider.nextSlide();
+                });
+                </script>
+           </p>
+           <p>
+            <button class="but" onclick="Slider.hide()">Hide</button>
+            <button class="but" onclick="Slider.show()">Show</button>
+           </p> 
+           <p>
+               <button id="toggle" class="but" onclick="Slider.play()">Start</button>
+           </p> 
+
+       </article>
+   </main>
+   <nav class="left column">
+       <h2>Menu</h2>
+       <ul>
+           <li><a href="contact.html">Contact</a></li>
+		   <li><a href="about.html">About</a></li>
+		   <li><a href="slider.html">Slider</a></li>
+		   <li><a href="media.html">Media</a></li>
+		   <li><a href="table.html">Table</a></li>
+       </ul>
+   </nav>
+   <div class="right column">
+       <h3>Right heading</h3>
+       <p></p>
+   </div>
+   <div class="push"></div>
+</div>
+<div class="footer-wrapper">
+   <footer class="footer"><img height="50" src="assets/img/logo.png" alt="logo"></footer>
+</div>
+</body>
+</html>
